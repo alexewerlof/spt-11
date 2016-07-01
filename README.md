@@ -9,6 +9,8 @@ npm start
 
 It'll start the server and open the client in your default browser.
 
+The port is defined in `package.json` under `config`.
+
 Frameworks/Libraries
 --------------------
 
@@ -50,6 +52,17 @@ The current background is courtesy of [xmoodboard](http://xmoodboard.tumblr.com/
 I didn't have access to the original assets.
 
 ## Add favicons
+
+## Pretty formatting
+
+The production server will most probably return a crammed result but the
+documentation should pretty-format the results by default (and maybe allow
+seeing the original response).
+
+## Use Web Workers
+
+Use Highlight.JS in a Web Worker to avoid freezing the UI when highlighting
+huge responses.
 
 ## Auto extraction from code
 

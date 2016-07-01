@@ -1,8 +1,11 @@
 {
   "name": "spt-11",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just an assignment",
   "main": "webpack.config.js",
+  "config": {
+    "port": 5000
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +14,17 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
+    "highlight.js": "git+https://git@github.com/isagalaev/highlight.js.git",
     "nib": "^1.1.0",
     "open": "0.0.5",
     "stylus": "^0.54.5",
     "zepto": "^1.0.1"
+  },
+  "engines": {
+    "node": "^6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/userpixel/spt-11.git"
   }
 }

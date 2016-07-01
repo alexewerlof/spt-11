@@ -10,7 +10,7 @@ app.get('/api', function (req, res) {
     res.send('yo');
 });
 
-var listener = app.listen(3000, function () {
+var listener = app.listen(process.env.npm_package_config_port, function () {
     var port = listener.address().port;
     console.log(`Server listening on port ${port}...`);
     if (!process.env.npm_config_production) {
