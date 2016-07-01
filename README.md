@@ -19,8 +19,7 @@ Frameworks/Libraries
 I can see that the page is using Bootstrap but I go with a minimal
 hand-coded solution to keep the size small and light weight.
 The problem definition says we're aiming for fastest speed and smallest
-footprint, so I didn't pick any framework or library. Instead of utility
-libraries like lodash or underscore, I use [native](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore) when possible and fallback only when needed.
+footprint, so I didn't pick any framework or library.
 As you know IE<11 is not supported by Microsoft [anymore](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support)
 and I guess the users of this site (developers) run a pretty decent version
 of their browser, but nevertheless I use some polyfills that should work on IE
@@ -65,6 +64,8 @@ Use Highlight.JS in a Web Worker to avoid freezing the UI when highlighting
 huge responses.
 
 ## Auto extraction from code
+
+## Parameter validation
 
 ## i18n support
 
