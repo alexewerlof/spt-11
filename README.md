@@ -1,18 +1,50 @@
 Intro
 -----
 
-SPT test. Run it with 
+SPT test. Run it with
 
 ```
 npm start
 ```
 
-It'll start the server and open the client in your default browser.
+This will:
+
+* compile JavaScript with WebPack
+* Generate CSS from Stylus
+* Start the Express server
+* And open the client in your default browser (not in production).
 
 The port is defined in `package.json` under `config`.
 
 Frameworks/Libraries
 --------------------
+
+## Why Riot?
+
+First I decided to write everything in plain JS. But as you know the
+imperative code is hard to maintain and doesn't scale very well.
+Since the problem definition requires smallest possible size, I chose
+Riot which is a very light weight micro library that abstracts away
+complexity while improving maintainability and adding scalability.
+
+* Tiny size (9.23 KB)
+* Isomorphic app
+* Content Security Policy (CSP) support for higher security
+* React based (many of React goodness is still there with a more familiar syntax)
+plus the V-DOM speed boost. This means it's going to be familiar to the team if
+they already know react.
+* No need for extra libraries for routing, etc.
+* The code base is ready to port to react (vs Knockout or Angular)
+* In Riot HTML and JavaScript appear much more familiar. Both are under the same
+component, but neatly separated from each other.
+* Less boilerplate (`"Hello {world}"` instead of `"Hello " + this.state.world`)
+
+I don't believe it's the silver bullet. It misses a big name like Goog/FB behind
+it, but since this project didn't have any explicit requirements, I did a quick
+search and found Riot and started using it. The API is pretty small and the
+syntax is pretty readable so it shouldn't be a problem to pick it up.
+
+## JSDoc
 
 ## Runtime
 
@@ -39,6 +71,12 @@ powerful build config.
 
 Future
 ------
+
+## Enable CSP
+
+## Use Helmet
+
+## Enable GZip
 
 ## Support other HTTP verbs
 
@@ -67,10 +105,11 @@ huge responses.
 
 ## Parameter validation
 
+## Support tokens and authenticated APIs
+
 ## i18n support
 
 ## Platform Compatibility
 
 I would test the UI thoroughly on mobile/tablets particularly the platform
 that is used more (depending on on analytics data).
-
