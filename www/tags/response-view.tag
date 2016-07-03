@@ -4,7 +4,7 @@
   {response}</code></pre>
 
   <script>
-  // import riot from 'riot';
+  import riot from 'riot';
   </script>
 
 </response-view>

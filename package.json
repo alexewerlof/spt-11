@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build:css": "stylus -c www/index.styl -o www/~index.css",
-    "build:tag": "riot --config riot.config.js",
-    "build:js": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ] -p [minifyify --output www/~bundle.js.map]",
+    "build:tag": "riot www/tags",
+    "build:js": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ] -p [minifyify --map ~bundle.js.map --output ~bundle.js.map]",
     "build:js-1": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ]",
     "build": "npm run build:tag && npm run build:js && npm run build:css",
     "prestart": "npm run build",

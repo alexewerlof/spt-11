@@ -1,7 +1,8 @@
 import riot from 'riot';
 import $ from 'jquery';
-import tags from './~tags.js';
 import console from 'console-browserify';
+import './tags/api-call';
+import './tags/response-view';
 
 $.getJSON('/api/')
 .then(function (resp) {
