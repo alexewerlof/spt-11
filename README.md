@@ -53,6 +53,10 @@ syntax is pretty readable so it shouldn't be a problem to pick it up.
 
 ## JSDoc
 
+## Linting
+
+to improve consistency and team efficiency.
+
 ## Runtime
 
 I can see that the page is using Bootstrap but I go with a minimal

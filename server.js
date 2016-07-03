@@ -1,4 +1,4 @@
-var fakeApiIndex = require('./fake-api');
+var fakeApiIndex = require('./fake-api/index.js');
 var process = require('process');
 var open = require("open");
 var express = require('express');

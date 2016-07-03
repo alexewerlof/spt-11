@@ -1,7 +1,7 @@
-exports = {
-  "Api Group Title": [
+module.exports = {
+  "endpoints": [
     {
-      "name": "Advertiser List",
+      "title": "Advertiser List",
       "description": "Lists all the advertisers",
       "url": "/advertisers/",
       "params": [
@@ -15,4 +15,4 @@ exports = {
       ]
     }
   ]
-}
+};
