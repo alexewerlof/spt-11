@@ -1,4 +1,4 @@
-{
+exports = {
   "Api Group Title": [
     {
       "name": "Advertiser List",

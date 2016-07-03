@@ -1,7 +1,13 @@
 Intro
 -----
 
-SPT test. Run it with
+SPT test. You need node 6+. Install dependencies with:
+
+```
+npm i
+```
+
+Then run it with:
 
 ```
 npm start
@@ -9,7 +15,8 @@ npm start
 
 This will:
 
-* compile JavaScript with WebPack
+* compile components
+* Create a bundle
 * Generate CSS from Stylus
 * Start the Express server
 * And open the client in your default browser (not in production).
@@ -77,6 +84,10 @@ Future
 ## Use Helmet
 
 ## Enable GZip
+
+## Use Nodejs clusters to improve scalability
+
+## Run the server behind a reverse proxy to improve speed and reduce cost
 
 ## Support other HTTP verbs
 
