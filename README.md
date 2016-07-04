@@ -25,7 +25,7 @@ The port is defined in `package.json` under `config`.
 See it live
 -----------
 
-This application is [deployed to Heroku](https://dazzling-mammoth-cave-57798.herokuapp.com/).
+This application is [deployed to Heroku](https://rugged-sequoia-84926.herokuapp.com/).
 To run it locally you can `heroky local` and if you deploy it, you can
 use `heroku open` to see it running on the cloud.
 
