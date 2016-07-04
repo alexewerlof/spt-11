@@ -1,21 +1,29 @@
 <api-call>
   <h2>{opts.title}</h2>
-  <select value={this.format} onchange={formatChanged}>
+  <select value={format} onchange={formatChanged}>
       <option value="json">JSON</option>
       <option value="xml">XML</option>
   </select>
   <button onclick={get}>GET</button>
-  <pre><code>GET {opts.url}</code></pre>
-  <response-view if={opts.headers} headers={headers} response={response}></response-view>
+  <div class="well">
+    <code-view content="GET {opts.url}"></code-view>
+  </div>
+  <div class="well" if={response}>
+    <code-view content={headers}></code-view>
+    <br/>
+    <code-view content={response}></code-view>
+  </div>
 
   <script>
   import riot from 'riot';
   import $ from 'jquery';
+  import './code-view';
 
   this.format = 'xml';
 
   this.formatChanged = function (e) {
     this.format = e.target.value;
+    this.get();
   }
 
   this.get = () => {
@@ -30,6 +38,7 @@
     .done((results, textStatus, jqXHR) => {
       this.response = jqXHR.responseText;
       this.headers = jqXHR.getAllResponseHeaders();
+      this.update();
     })
     .always(() => this.update());
   }

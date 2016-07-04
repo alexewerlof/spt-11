@@ -4,6 +4,7 @@
 
   <script>
   import riot from 'riot';
+  import './api-call';
   </script>
 
 </api-list>
