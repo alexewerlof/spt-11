@@ -1,10 +1,10 @@
 <api-call>
   <h2>{opts.title}</h2>
+  <button onclick={get}>GET</button>
   <select value={format} onchange={formatChanged}>
       <option value="json">JSON</option>
       <option value="xml">XML</option>
   </select>
-  <button onclick={get}>GET</button>
   <div class="well">
     <code-view content="GET {opts.url}"></code-view>
   </div>
