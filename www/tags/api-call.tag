@@ -9,9 +9,9 @@
     <code-view content="GET {opts.url}"></code-view>
   </div>
   <div class="well" if={response}>
-    <code-view content={headers}></code-view>
+    <code-view lang="http" content={headers}></code-view>
     <br/>
-    <code-view content={response}></code-view>
+    <code-view lang="json" content={response}></code-view>
   </div>
 
   <script>

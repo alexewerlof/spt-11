@@ -13,7 +13,7 @@
     "build:js": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ]",
     "build": "npm run build:tag && npm run build:js && npm run build:css",
     "prestart": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,7 @@
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "helmet": "^2.1.1",
-    "highlight.js": "isagalaev/highlight.js.git",
+    "highlight.js": "^9.5.0",
     "jquery": "^3.0.0",
     "nib": "^1.1.0",
     "open": "0.0.5",

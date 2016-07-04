@@ -51,6 +51,11 @@ it, but since this project didn't have any explicit requirements, I did a quick
 search and found Riot and started using it. The API is pretty small and the
 syntax is pretty readable so it shouldn't be a problem to pick it up.
 
+
+## Why highlight.js
+
+It's tiny and (fast](http://meta.stackexchange.com/questions/278141/highlight-js-for-real-please).
+
 ## JSDoc
 
 ## Linting
@@ -113,8 +118,8 @@ seeing the original response).
 
 ## Use Web Workers
 
-Use Highlight.JS in a Web Worker to avoid freezing the UI when highlighting
-huge responses.
+Use Highlight.JS in a Web Worker to [avoid freezing the UI](https://highlightjs.org/usage/)
+when highlighting huge responses.
 
 ## Auto extraction from code
 
