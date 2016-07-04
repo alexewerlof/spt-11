@@ -18,7 +18,7 @@ app.use(fakeApi);
 app.use(express.static(__dirname +  '/www'));
 
 // PORT will be set by Heroku, npm_package_config_port is set in package.json under config
-var listener = app.listen(PORT || process.env.npm_package_config_port || 5000, function () {
+var listener = app.listen(process.env.PORT || process.env.npm_package_config_port || 5000, function () {
     var port = listener.address().port;
     console.log(`Server listening on port ${port}...`);
 });
