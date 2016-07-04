@@ -97,6 +97,10 @@ Nevertheless, there are some integration and unit tests in the `/test` dir that
 can be run with `npm test`. For running the integration tests you need
 to run the server separately.
 
+Nevertheless, there are some mocha/chai tests in the `/test` dir that
+can be run with `npm test`. For running the integration tests you need
+to run the server separately.
+
 Future Improvements
 -------------------
 
