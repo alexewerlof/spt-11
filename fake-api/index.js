@@ -10,7 +10,9 @@ function strContains(containerStr, containeeStr) {
   return containerStr.indexOf(containeeStr) !== -1;
 }
 
-module.exports = function (req, res, next) {
+exports.strContains = strContains;
+
+exports.middleware = function (req, res, next) {
   if (req.url.toLowerCase() === '/endpoints/') {
     // Send the list of endpoints to the client
     res.send(ENDPOINTS);

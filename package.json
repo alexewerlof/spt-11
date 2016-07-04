@@ -9,11 +9,13 @@
   "scripts": {
     "build:css": "stylus -c www/styles",
     "build:tag": "riot www/tags",
-    "build:js":     "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ] -p [minifyify --map ~bundle.js.map --output ~bundle.js.map]",
+    "build:js": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ] -p [minifyify --map ~bundle.js.map --output ~bundle.js.map]",
     "build:js-dev": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ]",
     "build": "npm run build:tag && npm run build:js && npm run build:css",
     "prestart": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:int": "mocha test/integration --recursive",
+    "test:unit": "mocha test/server --recursive",
+    "test": "npm run test:unit && npm run test:int"
   },
   "keywords": [],
   "author": "",
@@ -39,5 +41,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/userpixel/spt-11.git"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^2.5.3"
   }
 }

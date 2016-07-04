@@ -11,7 +11,12 @@ Please disable AdBlock on this page if the Ajax calls have a problem.**
 The source is of course [on Github](https://github.com/userpixel/spt-11) under ISC licenses.
 
 It needs Node 6+. First install dependencies with `npm i`
-then run it with `npm start`.
+then run it with `npm start`. You can run all the tests using `npm test`
+command of course. For running the integration tests you need
+to run the server separately.
+
+Please note that since Heroku doesn't install
+devDependencies, the build dependencies must be defined as `dependencies`.
 
 This will:
 
@@ -30,7 +35,7 @@ I use plain npm scripts with Browserify. I tried WebPack
 but in the end settled for Browserify because at the moment the project doesn't
 need more.
 
-Powered by: Express, ES6, Browserify, Heroku, Riot.js, Stylus
+Powered by: Express, ES6, Browserify, Heroku, Riot.js, Stylus, Mocha/Chai
 
 Frameworks/Libraries
 --------------------
@@ -68,7 +73,7 @@ The following browsers are tested:
 * Chrome (Desktop and Android)
 * Firefox
 
-I also ran it through [Google Speed Test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fdazzling-mammoth-cave-57798.herokuapp.com%2F)
+I also ran it through [Google PageSpeed Test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fdazzling-mammoth-cave-57798.herokuapp.com%2F)
 and it scored pretty good (96/100 on desktop and 90/100 on mobile).
 
 ### Quick stats
@@ -82,11 +87,15 @@ The server uses Helmet for security and Gzip compression for network utilization
 ## About tests
 
 I usually use Mocha or Jasmine for unit tests whenever I can but for this project
-I didn't write any tests for two reasons:
+I didn't have time to write too much tests for two reasons:
 
-1. I was learning Riot.js and it didn't make much sense to write tests from the started
+1. I was learning Riot.js and it didn't make much sense to write tests while the code was pretty unsettled
 2. The end code is really tiny and there's not so much to test
-3. Time constrains (I spent 8 hours in total on the test)
+3. Time constrains
+
+Nevertheless, there are some integration and unit tests in the `/test` dir that
+can be run with `npm test`. For running the integration tests you need
+to run the server separately.
 
 Future Improvements
 -------------------
