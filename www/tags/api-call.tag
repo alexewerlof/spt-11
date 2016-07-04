@@ -21,10 +21,10 @@
 
   this.format = 'xml';
 
-  this.formatChanged = function (e) {
+  this.formatChanged = (e) => {
     this.format = e.target.value;
     this.get();
-  }
+  };
 
   this.get = () => {
     $.ajax({

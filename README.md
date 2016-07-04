@@ -113,8 +113,8 @@ seeing the original response).
 
 ## Use Web Workers
 
-Use Highlight.JS in a Web Worker to avoid freezing the UI when highlighting
-huge responses.
+Use Highlight.JS in a Web Worker to [avoid freezing the UI](https://highlightjs.org/usage/)
+when highlighting huge responses.
 
 ## Auto extraction from code
 
@@ -128,3 +128,12 @@ huge responses.
 
 I would test the UI thoroughly on mobile/tablets particularly the platform
 that is used more (depending on on analytics data).
+
+
+# TODO
+
+* Review all TODOs in the code and document
+* Performance improvements
+* Cross browser test
+* Write unit tests
+* Use highlight.js if there's time

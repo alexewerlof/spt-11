@@ -14,12 +14,6 @@
           "type": "string"
         }
       ]
-    },
-    {
-      "url": "/owners/",
-      "title": "List of owners List",
-      "description": "Lists all the advertisement owners",
-      "params": []
     }
   ]
 }

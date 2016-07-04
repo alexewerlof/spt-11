@@ -1,6 +1,7 @@
 // @import 'nib'
 
 max-content-width = 1000px
+space = 0.3em
 
 // Note: many color picker values are hard-coded.
 // Branding and identity colors should reside in variables.
@@ -28,6 +29,23 @@ h2
   font-size 2.3rem
   margin 1.6em 0 0 0
 
+button,
+select
+  background-color rgb(66, 139, 202)
+  border 1px solid rgb(53, 126, 189)
+  padding space
+  border-radius 5px
+  font-size inherit
+  color white
+
+  &:active
+    background-color rgb(48, 113, 169)
+    box-shadow inset 0.3em black
+    border-color rgb(40, 94, 142)
+
+  &:focus
+    outline none
+
 pre
   margin 0
 
@@ -38,6 +56,7 @@ pre
   padding 0.5em
   margin-top 0.6em
   margin-bottom 0.6em
+  overflow scroll
 
 .content
   max-width max-content-width
