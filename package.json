@@ -9,8 +9,8 @@
   "scripts": {
     "build:css": "stylus -c www/styles",
     "build:tag": "riot www/tags",
-    "build:js-prod": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ] -p [minifyify --map ~bundle.js.map --output ~bundle.js.map]",
-    "build:js": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ]",
+    "build:js": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ] -p [minifyify --map ~bundle.js.map --output ~bundle.js.map]",
+    "build:js-dev": "browserify -e www/index.js -o www/~bundle.js -d -t [ babelify ]",
     "build": "npm run build:tag && npm run build:js && npm run build:css",
     "prestart": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
