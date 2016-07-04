@@ -1,7 +1,6 @@
 <response-view>
-  <pre><code>{opts.headers}
 
-  {opts.response}</code></pre>
+  <pre><code>{opts.headers}</code><code>{opts.response}</code></pre>
 
   <script>
   import riot from 'riot';

@@ -6,7 +6,7 @@
   </select>
   <button onclick={get}>GET</button>
   <pre><code>GET {opts.url}</code></pre>
-  <response-view headers={headers} response={response}></response-view>
+  <response-view if={opts.headers} headers={headers} response={response}></response-view>
 
   <script>
   import riot from 'riot';
@@ -26,8 +26,12 @@
       error: console.error,
       method: 'GET', //TODO allow the user to choose
       // data: {}, // TODO allow the user to send params
-      success: (results) => this.response = results
-    }).always(() => this.update());
+    })
+    .done((results, textStatus, jqXHR) => {
+      this.response = jqXHR.responseText;
+      this.headers = jqXHR.getAllResponseHeaders();
+    })
+    .always(() => this.update());
   }
   </script>
 
