@@ -1,6 +1,5 @@
 var fakeApi = require('./fake-api');
 var process = require('process');
-var open = require("open");
 var express = require('express');
 var app = express();
 var compression = require('compression');
@@ -21,8 +20,4 @@ app.use(express.static(__dirname +  '/www'));
 var listener = app.listen(process.env.npm_package_config_port || 5000, function () {
     var port = listener.address().port;
     console.log(`Server listening on port ${port}...`);
-    if (!process.env.npm_config_production) {
-        console.log('Opening browser...');
-        //TODO enable this open(`http://localhost:${port}`);
-    }
 });

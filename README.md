@@ -19,9 +19,17 @@ This will:
 * Create a bundle
 * Generate CSS from Stylus
 * Start the Express server
-* And open the client in your default browser (not in production).
 
 The port is defined in `package.json` under `config`.
+
+See it live
+-----------
+
+This application is [deployed to Heroku](https://dazzling-mammoth-cave-57798.herokuapp.com/).
+To run it locally you can `heroky local` and if you deploy it, you can
+use `heroku open` to see it running on the cloud.
+
+The source is of course on [Github](https://github.com/userpixel/spt-11).
 
 Frameworks/Libraries
 --------------------
