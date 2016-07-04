@@ -12,7 +12,7 @@ app.use(helmet());
 app.use(compression());
 
 // Fake API middleware
-app.use(fakeApi);
+app.use(fakeApi.middleware);
 
 // The front end is in www folder. Serve it as is.
 app.use(express.static(__dirname +  '/www'));
