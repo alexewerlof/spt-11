@@ -1,13 +1,14 @@
 <api-list>
-  name, description, url, params
+  names, description, url, params
 
-  <api-call each={ opts.endpoints } endpoint={ this }></api-call>
+  <p>{JSON.stringify(opts)}</p>
+  <api-call each={ opts.endpoints } url={ url } title={ title }></api-call>
 
   <script>
   import riot from 'riot';
   import console from 'console-browserify';
 
-  console.log(opts);
+  console.log(this.opts);
   </script>
 
 </api-list>

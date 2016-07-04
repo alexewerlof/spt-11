@@ -5,9 +5,10 @@ import './tags/api-list';
 import './tags/api-call';
 import './tags/response-view';
 
-$.getJSON('/api/')
+$.getJSON('/endpoints/')
 .then(function (resp) {
-  riot.mount('*', resp);
+  console.log(resp);
+  riot.mount('api-list', resp);
 })
 .fail(function (err, msg) {
   console.log(`Error ${err}: ${msg}`);

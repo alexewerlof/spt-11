@@ -1,0 +1,25 @@
+{
+  "endpoints": [
+    {
+      "url": "/advertisers/",
+      "title": "Advertiser List",
+      "description": "Lists all the advertisers",
+      "fileName": "advertisers",
+      "params": [
+        {
+          "name": "format",
+          "description": "Describes the format of the result?",
+          "default": "api",
+          "optional": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "url": "/owners/",
+      "title": "List of owners List",
+      "description": "Lists all the advertisement owners",
+      "params": []
+    }
+  ]
+}

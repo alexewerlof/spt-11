@@ -1,23 +1,33 @@
 <api-call>
-  <h2>{opts.endpoint.title}</h2>
-  <select>
+  <h2>{opts.title}</h2>
+  <select value={this.format} onchange={formatChanged}>
       <option value="json">JSON</option>
       <option value="xml">XML</option>
   </select>
   <button onclick={get}>GET</button>
-  <pre><code>GET {opts.endpoint.url}</code></pre>
+  <pre><code>GET {opts.url}</code></pre>
   <response-view headers={headers} response={response}></response-view>
 
   <script>
   import riot from 'riot';
   import $ from 'jquery';
 
+  this.format = 'xml';
+
+  this.formatChanged = function (e) {
+    this.format = e.target.value;
+  }
+
   this.get = () => {
-    $.get(opts.endpoint.url, function (results) {
-      this.response = results;
-      this.update();
-      //TODO happy coding? error handling.
-    });
+    $.ajax({
+      url: opts.url,
+      dataType: this.format,
+      context: this,
+      error: console.error,
+      method: 'GET', //TODO allow the user to choose
+      // data: {}, // TODO allow the user to send params
+      success: (results) => this.response = results
+    }).always(() => this.update());
   }
   </script>
 
